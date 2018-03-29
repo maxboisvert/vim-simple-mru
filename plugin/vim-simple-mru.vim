@@ -25,7 +25,7 @@ fun! s:SimpleMruPlugin()
             return
         endif
 
-        let command1 = 'sed -i .bak "\+' . fname . '+d" ' . g:vsm_file
+        let command1 = 'sed -i .bak "\+^' . fname . '$+d" ' . g:vsm_file
         let command2 = "echo '" . fname . "' >> " . g:vsm_file
         call system("(" . command1 . " ; " . command2 . ") &")
     endfun
