@@ -2,4 +2,8 @@
 
 ## Installation
 
-# vim-simple-mru
+Use `vim-plug` or your preffered way. You also need `fzf.vim` installed.
+
+# Usage
+
+Use the `:SimpleMRU` command
