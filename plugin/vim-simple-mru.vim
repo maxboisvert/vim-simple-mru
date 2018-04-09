@@ -4,7 +4,7 @@ endif
 let g:loaded_vim_simple_mru = 1
 
 let g:vsm_size = get(g:, 'vsm_size', 100)
-let g:vsm_last_file = get(g:, 'vsm_last_file', 1)
+let g:vsm_open_last_file = get(g:, 'vsm_open_last_file', 1)
 let g:vsm_file = get(g:, 'vsm_file', '.vim-simple-mru')
 let g:vsm_exclude = get(g:, 'vsm_exclude', '')
 
@@ -15,7 +15,7 @@ fun! s:SimpleMruPlugin()
     autocmd VimEnter * nested call s:SimpleMruInit()
 
     fun! s:SimpleMruInit()
-        if g:vsm_last_file && len(argv()) == 0
+        if g:vsm_open_last_file && len(argv()) == 0
             call s:OpenLastFile()
         endif
 
